@@ -1,11 +1,3 @@
-<html>
-	<head>
-		<title>This is a test page</title>
-	</head>
-	<body>
-		Yup, this is a test<br />
-		This part ~{ (+ 2 4) ~} should be replaced.<br />
-		Also this ~{ (format nil "This is a test ~a" 5) ~}<br />
-		Also this ~{ (print "And another test") ~}
-	</body>
-</html>
+Yup, this is a test<br />
+This part ~{ (+ 2 4) ~} should be replaced.<br />
+Also this ~{ (format nil "This is a test ~{~a~}" '(4 5 6)) ~}<br />

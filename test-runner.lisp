@@ -1,22 +1,21 @@
 (load "package.lisp")
 
-(in-package :web-lisp)
+(defun plain-text-content ()
+	(string "This is some plain text that will be emitted by the web server"))
 
-(defun test-method-1 ()
-	(string "test method 1"))
+(defun xml-content ()
+	(string "<xml><message>This is an XML message emitted by the web server</message></xml>"))
 
-(defun test-method-2 ()
-	(string "test method 2"))
+(defun simple-html ()
+	(web-lisp:render #p"templates/simple.html"))
 
-(defun test-method-3 ()
-	(string "test method 3"))
+(defun layout-html ()
+	(web-lisp:render #p"templates/layout-inner.html" :layout #p"templates/layout-outer.html"))
 
-(defun test-render ()
-	(render "templates/index.html"))
+(web-lisp:add-route "/plain" #'plain-text-content)
+(web-lisp:add-route "/xml" #'xml-content :content-type "text/xml")
+(web-lisp:add-route "/simple" #'simple-html)
+(web-lisp:add-route "/layout" #'layout-html)
 
-(add-route "/url1" #'test-method-1)
-(add-route "/url2" #'test-method-2)
-(add-route "/something" #'test-method-3)
-(add-route "/" #'test-render)
-
-(start-web)
+(defun serve ()
+	(web-lisp:start-web))

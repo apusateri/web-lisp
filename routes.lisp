@@ -2,12 +2,16 @@
 
 (defparameter *url-routes* '())
 
+(defun route-matches (path route)
+	"Determine if a route matches a path - this will need to be changed for regex compatibility"
+	(string= path route))
+
 (defun add-route (route function &key (method :get) (status 200) (content-type "text/html"))
 	"Add a route to the current application's route table"
 	(setf *url-routes*  (append `((,route ,function ,method ,status ,content-type)) *url-routes*)))
 
 (defun get-route-equal (route path)
-	(if (string= path (car route))
+	(if (route-matches path (car route))
 		`(,(nth 3 route)
 			(:content-type ,(nth 4 route)) 
 			(,(funcall (cadr route))))))

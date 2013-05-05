@@ -1,6 +1,6 @@
 (defpackage :web-lisp
 	(:use :common-lisp)
-	(:export	:application-run
+	(:export	:start-web
 				:add-route
 				:render))
 
