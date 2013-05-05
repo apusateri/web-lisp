@@ -1,8 +1,6 @@
 (in-package :web-lisp)
 
 (defun do-eval (match register-1)
-	(print register-1)
-;	(string (eval (read-from-string register-1))))
 	(format nil "~a" (eval (read-from-string register-1))))
 
 (defun render-eval (line)
