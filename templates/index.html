@@ -1,3 +1,48 @@
-Yup, this is a test<br />
-This part ~{ (+ 2 4) ~} should be replaced.<br />
-Also this ~{ (format nil "This is a test ~{~a~}" '(4 5 6)) ~}<br />
+<html>
+	<head>
+		<title>~{ title ~}</title>
+	</head>
+	<body>
+		~{ (header) ~}
+		<p>
+			(web-lisp) is a web micro-framework written in ANSI Common LISP, currently in the very early stages of development.  (web-lisp) is built on top of Hunchentoot and Clack, and directly depends on clack and cl-ppcre.
+		</p>
+		<p>
+			Check <a href="/getting-started">Getting Started</a> for a brief overview of using this framework.
+		</p>
+		<p>
+			Some things that have been completed so far are:
+			<ul>
+				<li><a href="/routing">Regex-based URL Routing</a></li>
+				<li><a href="/templates">Custom templating</a> allowing for in-line LISP expression evaluation</li>
+				<li><a href="/environment">Environment Variables</a> available on page</li>
+			</ul>
+		</p>
+		<p>
+			Here are some examples included with the package:
+			<ul>
+				<li><a href="/plain">Plain Text Output</a></li>
+				<li><a href="/xml">XML Output</a></li>
+				<li><a href="/simple">Simple HTML Template</a></li>
+				<li><a href="/layout">Layout HTML Template (Layout + Nested HTML)</a></li>
+				<li><a href="/snippets">Snippets of HTML</a> can be included in multiple pages</a></li>
+				<li><a href="/functions">Ability to call defined functions from HTML</a></li>
+			</ul>
+		</p>
+		<h2>TODO list</h2>
+		<ol>
+			<li>Write Regex based URL Routing description page</li>
+			<li>Write getting started page</li>
+			<li>Write custom templating page</li>
+			<li>Cookie Handling</li>
+			<li>Query String Handling</li>
+			<li>Authentication</li>
+			<li>Show Environment Variables Javascript</li>
+			<li>Static File Handlers</li>
+			<li>Error Page Handlers</li>
+			<li>Change site design to use Boostrap</li>
+			<li>Multiple File Handlers (several JS/CSS files compressed into one endpoint)</li>
+		</ol>
+		~{ (web-lisp:powered-by) ~}
+	</body>
+</html>

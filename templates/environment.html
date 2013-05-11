@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>~{ title ~}</title>
+	</head>
+	<body>
+		<style type="text/css">
+		td {
+			white-space: nowrap;
+			padding: 4px;
+			border-top: solid 1px black;
+		}
+		</style>
+		~{ (header) ~}
+		<p>
+			The following environment variables are available:<br /><br />
+			<table style="width: 100%; border: solid 1px black">
+				<thead>
+					<th>Variable</th>
+					<th>Command</th>
+					<th>Value</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Request Method</td>
+						<td><code>(getf web-lisp:env :request-method)</code></td>
+						<td>~{ (getf web-lisp:env :request-method) ~}</td>
+					</tr>
+					<tr>
+						<td>Script Name</td>
+						<td><code>(getf web-lisp:env :script-name)</code></td>
+						<td>~{ (getf web-lisp:env :script-name) ~}</td>
+					</tr>
+					<tr>
+						<td>Path Info</td>
+						<td><code>(getf web-lisp:env :path-info)</code></td>
+						<td>~{ (getf web-lisp:env :path-info) ~}</td>
+					</tr>
+					<tr>
+						<td>Server Name</td>
+						<td><code>(getf web-lisp:env :server-name)</code></td>
+						<td>~{ (getf web-lisp:env :server-name) ~}</td>
+					</tr>
+					<tr>
+						<td>Server Port</td>
+						<td><code>(getf web-lisp:env :server-port)</code></td>
+						<td>~{ (getf web-lisp:env :server-port) ~}</td>
+					</tr>
+					<tr>
+						<td>Server Protocol</td>
+						<td><code>(getf web-lisp:env :server-protocol)</code></td>
+						<td>~{ (getf web-lisp:env :server-protocol) ~}</td>
+					</tr>
+					<tr>
+						<td>Request URI</td>
+						<td><code>(getf web-lisp:env :request-uri)</code></td>
+						<td>~{ (getf web-lisp:env :request-uri) ~}</td>
+					</tr>
+					<tr>
+						<td>URL Scheme</td>
+						<td><code>(getf web-lisp:env :url-scheme)</code></td>
+						<td>~{ (getf web-lisp:env :url-scheme) ~}</td>
+					</tr>
+					<tr>
+						<td>Remote Address</td>
+						<td><code>(getf web-lisp:env :remote-addr)</code></td>
+						<td>~{ (getf web-lisp:env :remote-addr) ~}</td>
+					</tr>
+					<tr>
+						<td>Remote Port</td>
+						<td><code>(getf web-lisp:env :remote-port)</code></td>
+						<td>~{ (getf web-lisp:env :remote-port) ~}</td>
+					</tr>
+					<tr>
+						<td>Query String</td>
+						<td><code>(getf web-lisp:env :query-string)</code></td>
+						<td>~{ (getf web-lisp:env :query-string) ~}</td>
+					</tr>
+					<tr>
+						<td>Raw Body</td>
+						<td><code>(getf web-lisp:env :raw-body)</code></td>
+						<td>~{ (getf web-lisp:env :raw-body) ~}</td>
+					</tr>
+					<tr>
+						<td>Content Length</td>
+						<td><code>(getf web-lisp:env :content-length)</code></td>
+						<td>~{ (getf web-lisp:env :content-length) ~}</td>
+					</tr>
+					<tr>
+						<td>Content Type</td>
+						<td><code>(getf web-lisp:env :content-type)</code></td>
+						<td>~{ (getf web-lisp:env :content-type) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP Host</td>
+						<td><code>(getf web-lisp:env :http-host)</code></td>
+						<td>~{ (getf web-lisp:env :http-host) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP User Agent</td>
+						<td><code>(getf web-lisp:env :http-user-agent)</code></td>
+						<td>~{ (getf web-lisp:env :http-user-agent) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP DNT</td>
+						<td><code>(getf web-lisp:env :http-dnt)</code></td>
+						<td>~{ (getf web-lisp:env :http-dnt) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP Referrer</td>
+						<td><code>(getf web-lisp:env :http-referer)</code></td>
+						<td>~{ (getf web-lisp:env :http-referer) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP Accept Encoding</td>
+						<td><code>(getf web-lisp:env :http-accept-encoding)</code></td>
+						<td>~{ (getf web-lisp:env :http-accept-encoding) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP Accept Charset</td>
+						<td><code>(getf web-lisp:env :http-accept-charset)</code></td>
+						<td>~{ (getf web-lisp:env :http-accept-charset) ~}</td>
+					</tr>
+					<tr>
+						<td>HTTP Cookie</td>
+						<td><code>(getf web-lisp:env :http-cookie)</code></td>
+						<td>~{ (getf web-lisp:env :http-cookie) ~}</td>
+					</tr>
+				</tbody>
+			</table>
+		</p>
+		~{ (web-lisp:powered-by) ~}
+	</body>
+</html>

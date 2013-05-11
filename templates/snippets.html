@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>~{ title ~}</title>
+	</head>
+	<body>
+		~{ (header) ~}
+		<h2>Snippets</h2>
+		<p>
+			HTML pages can also include "snippets" of html that can be included in several different documents, all with the ability to run inline LISP S-Expressions.
+		</p>
+		<p>
+			Here's a control that generates a random number, placed twice on this page:
+			~{ (web-lisp:render #p"templates/random.html") ~}<br />
+			~{ (web-lisp:render #p"templates/random.html") ~}
+		</p>
+		~{ (web-lisp:powered-by) ~}
+	</body>
+</html>

@@ -1,10 +1,13 @@
 <html>
 	<head>
-		<title>Simple HTML Page</title>
+		<title>~{ title ~}</title>
 	</head>
 	<body>
+		~{ (header) ~}
+		<h2>Simple HTML</h2>
 		This is a simple HTML page rendered through the Web-Lisp server.<br />
 		Dynamic replacement can be used to access lisp functions, like this: <br />
-		The result of (+ 2 5) is ~{ (+ 2 5 ) ~}
+		The result of (+ 2 5) is ~{ (+ 2 5 ) ~}<br />
+		~{ (web-lisp:powered-by) ~}
 	</body>
 </html>

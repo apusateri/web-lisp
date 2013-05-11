@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>~{ title ~}</title>
+</head>
+<body>
+	~{ (header) ~}
+	<h2>Functions</h2>
+	You can also call functions defined elsewhere in your code from within the template pages:<br />
+	<h3>Fibonacci Sequence</h3>
+	(fib 0): ~{ (fib 0) ~}<br />
+	(fib 1): ~{ (fib 1) ~}<br />
+	(fib 20): ~{ (fib 20) ~}<br />
+	(fib 30): ~{ (fib 30) ~}<br />
+	<h3>Tail-Recursive Fibonacci Sequence</h3>
+	(fib-trec 30): ~{ (fib-trec 30) ~}<br />
+	(fib-trec 100): ~{ (fib-trec 100) ~}<br />
+	(fib-trec 1024): ~{ (fib-trec 1024) ~}<br />
+	(fib-trec 65536): ~{ (fib-trec 65536) ~}<br />
+	~{ (web-lisp:powered-by) ~}
+</body>

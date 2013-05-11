@@ -1,8 +1,10 @@
 (defpackage :web-lisp
 	(:use :common-lisp)
-	(:export	:start-web
-				:add-route
-				:render))
+	(:export	:add-route
+				:env
+				:powered-by
+				:render
+				:start-web))
 
 (ql:quickload :clack)
 (ql:quickload :cl-ppcre)

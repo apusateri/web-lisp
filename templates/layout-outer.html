@@ -1,14 +1,17 @@
 <html>
 	<head>
-		<title>Layout HTML Page</title>
+		<title>~{ title ~}</title>
 	</head>
 	<body>
+		~{ (header) ~}
+		<h2>Layout HTML</h2>
 		This is the layout file used to render the HTML page.<br />
 		Dynamic replacement is available within the layout, i.e.: <br />
 		The result of (+ 4 6) is ~{ (+ 4 6) ~}<br />
-		This is where we enter the "content" of the layout: <br />
+		This is where we enter the "content" of the layout: <hr />
 		~{ body ~}
-		<br />
+		<hr />
 		And then we can add more things in our layout afterwards
+		~{ (web-lisp:powered-by) ~}
 	</body>
 </html>
